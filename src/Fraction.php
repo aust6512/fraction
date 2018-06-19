@@ -325,13 +325,25 @@ class Fraction
         $float = rtrim(sprintf('%.8F', $float), '0');
 
         // Find and grab the decimal space and everything after it
-        $denominator = strstr($float, '.');
+        // Find and grab the decimal space and everything after it
+        $grab = strstr($float, '.');
 
         // Pad a one with zeros for the length of the decimal places
         // ie  0.1 = 10; 0.02 = 100; 0.01234 = 100000;
-        $denominator = (int) str_pad('1', strlen($denominator), '0');
+        $denominator = (int) str_pad('1', strlen($grab), '0');
+
         // Multiply to get rid of the decimal places.
         $numerator = (int) ($float*$denominator);
+
+        if ($grab == .333333 || $grab == .666667) {
+           $numerator = intval(round($numerator/333333));
+           $denominator = 3;
+          }
+
+        if ($grab == .833333 || $grab == .166667) {
+           $numerator = intval(round($numerator/166667));
+           $denominator = 6;
+          }
 
         return new self($numerator, $denominator);
     }
