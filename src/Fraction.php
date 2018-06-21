@@ -321,8 +321,8 @@ class Fraction
         }
 
         // Make sure the float is a float not scientific notation.
-        // Limit a max of 8 chars to prevent float errors
-        $float = rtrim(sprintf('%.8F', $float), '0');
+        // Limit a max of 6 chars to prevent float errors
+        $float = rtrim(sprintf('%.6F', $float), '0');
 
         // Find and grab the decimal space and everything after it
         // Find and grab the decimal space and everything after it
