@@ -346,7 +346,7 @@ class Fraction
           }
 
         if ($grab == .083333 || $grab == .916667 || $grab == .416667 || $grab == .583333) {
-           $numerator = intval(round($numerator/166667));
+           $numerator = intval(round($numerator/83333));
             $denominator = 12;
           }
 
