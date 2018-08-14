@@ -339,13 +339,18 @@ class Fraction
           $numerator = intval(round($numerator/999999));
           $denominator = 1;
         }
+        
+        if ($grab == .499999 || $grab == .499998) {
+          $numerator = intval(round($numerator/499999));
+          $denominator = 2;
+        }
 
         if ($grab == .333333 || $grab == .666667 || $grab == .666666 || $grab == .333332) {
            $numerator = intval(round($numerator/333333));
            $denominator = 3;
           }
 
-        if ($grab == .833333 || $grab == .166667 || $grab == .1666666) {
+        if ($grab == .833333 || $grab == .166667 || $grab == .166666) {
            $numerator = intval(round($numerator/166667));
            $denominator = 6;
           }
