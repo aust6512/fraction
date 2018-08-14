@@ -335,7 +335,12 @@ class Fraction
         // Multiply to get rid of the decimal places.
         $numerator = (int) ($float*$denominator);
 
-        if ($grab == .333333 || $grab == .666667 || $grab == .666666) {
+        if ($grab == .999999 || $grab == .999998) {
+          $numerator = intval(round($numerator));
+          $denominator = 1;
+        }
+
+        if ($grab == .333333 || $grab == .666667 || $grab == .666666 || $grab == .333332) {
            $numerator = intval(round($numerator/333333));
            $denominator = 3;
           }
