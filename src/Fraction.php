@@ -345,17 +345,17 @@ class Fraction
           $denominator = 2;
         }
 
-        if ($grab == .333333 || $grab == .666667 || $grab == .666666 || $grab == .333332) {
+        if ($grab == .333333 || $grab == .333334 || $grab == .666667 || $grab == .666666 || $grab == .333332) {
            $numerator = intval(round($numerator/333333));
            $denominator = 3;
           }
 
-        if ($grab == .833333 || $grab == .166667 || $grab == .166666) {
+        if ($grab == .833333 || $grab == .833334 || $grab == .166667 || $grab == .166666) {
            $numerator = intval(round($numerator/166667));
            $denominator = 6;
           }
 
-        if ($grab == .083333 || $grab == .916667 || $grab == .416667 || $grab == .583333) {
+        if ($grab == .083333 || $grab == .916667 || $grab == .416667 || $grab == .416666 || $grab == .583333) {
            $numerator = intval(round($numerator/83333));
             $denominator = 12;
           }
