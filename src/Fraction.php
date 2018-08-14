@@ -336,7 +336,7 @@ class Fraction
         $numerator = (int) ($float*$denominator);
 
         if ($grab == .999999 || $grab == .999998) {
-          $numerator = intval(round($numerator));
+          $numerator = intval(round($numerator/999999));
           $denominator = 1;
         }
 
@@ -345,7 +345,7 @@ class Fraction
            $denominator = 3;
           }
 
-        if ($grab == .833333 || $grab == .166667) {
+        if ($grab == .833333 || $grab == .166667 || $grab == .1666666) {
            $numerator = intval(round($numerator/166667));
            $denominator = 6;
           }
